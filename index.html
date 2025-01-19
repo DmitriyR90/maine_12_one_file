@@ -748,13 +748,12 @@
     .card-live-header__wrap {
       background-color: inherit;
 
-      width: 9.375vw;
-
+      width: clamp(75px, 9.375vw, 180px);
       height: 15%;
 
       position: absolute;
 
-      border-radius: 0 0 15px 0;
+      border-radius: 0 0 0.781vw 0;
     }
     .card-live-header__text {
       white-space: nowrap;
@@ -764,7 +763,7 @@
       transform: translateX(-50%) translateY(-50%);
 
       text-transform: uppercase;
-      font-size: 1.32vw;
+      font-size: clamp(10px, 1.32vw, 26px);
       line-height: 0.9;
       font-weight: bold;
     }
@@ -778,7 +777,7 @@
     }
 
     .card-live-button {
-      width: 6.25vw;
+      width: clamp(50px, 6.25vw, 120px);
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -791,7 +790,7 @@
       display: inline-block;
       color: inherit;
       background-color: inherit;
-      font-size: 1.25vw;
+      font-size: clamp(10px, 1.25vw, 25px);
       font-weight: 600;
       transition: all 0.2s;
     }
@@ -817,6 +816,7 @@
 
     @media (max-width: 677px) {
       .card-live-header__wrap {
+        width: clamp(65px, 18.375vw, 180px);
         border-radius: 0 0 6.5px 0;
       }
       .live__header h2 {
